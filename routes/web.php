@@ -19,3 +19,7 @@ Route::get('/', function () {
 
 // ログイン画面
 Route::get('/list', [App\Http\Controllers\ArticleController::class, 'showList'])->name('list');
+
+Route::get('/regist',[App\Http\Controllers\ArticleController::class, 'showRegistForm'])->name('regist');
+
+Route::post('/regist',[App\Http\Controllers\ArticleController::class, 'registSubmit'])->name('submit');
